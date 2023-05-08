@@ -26,13 +26,15 @@ export default function MyApp({
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
-    <SessionContextProvider supabaseClient={supabase} initialSession={session}>
+    // <SessionContextProvider supabaseClient={supabase} initialSession={session}>
+    <>
       <RWBProvider>
         <div className={cx(sfPro.variable, inter.variable)}>
           <Component {...pageProps} />
         </div>
       </RWBProvider>
       <Analytics />
-    </SessionContextProvider>
+    </>
+    // </SessionContextProvider>
   );
 }

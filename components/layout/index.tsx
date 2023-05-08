@@ -1,6 +1,5 @@
 import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";

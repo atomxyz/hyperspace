@@ -27,7 +27,7 @@ export default function Layout({
   return (
     <>
       <Meta {...meta} />
-      <SignInModal />
+      {/* <SignInModal /> */}
       <div className="fixed w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
       <div
         className={`fixed top-0 w-full bg-[#fdf8f4] ${
@@ -47,7 +47,7 @@ export default function Layout({
             ></Image>
             <p>Atom</p>
           </Link>
-          <div>
+          {/* <div>
             <AnimatePresence>
               {!session ? (
                 <motion.button
@@ -61,13 +61,13 @@ export default function Layout({
                 <UserDropdown />
               )}
             </AnimatePresence>
-          </div>
+          </div> */}
         </div>
       </div>
       <main className="flex w-full flex-col items-center justify-center bg-[#fdf8f4] py-32">
         {children}
       </main>
-      <div className="absolute w-full border-t border-gray-200 bg-white py-5 text-center">
+      <div className="bg-background absolute w-full border-t border-gray-200 bg-[#fdf8f4] py-5 text-center">
         <p className=" text-gray-500">Atom {new Date().getFullYear()}</p>
       </div>
     </>

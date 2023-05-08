@@ -20,8 +20,8 @@ export default function Layout({
   };
   children: ReactNode;
 }) {
-  const session = useSession();
-  const { SignInModal, setShowSignInModal } = useSignInModal();
+  // const session = useSession();
+  // const { SignInModal, setShowSignInModal } = useSignInModal();
   const scrolled = useScroll(50);
 
   return (

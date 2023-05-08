@@ -99,7 +99,7 @@ export default function EquationG() {
       <g
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         transform="matrix(1 0 0 -1 0 0)"
       >
         <g data-mml-node="math">

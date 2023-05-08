@@ -21,9 +21,10 @@ const inter = Inter({
 
 export default function MyApp({
   Component,
-  pageProps: { session, ...pageProps },
-}: AppProps<{ session: Session }>) {
-  const [supabase] = useState(() => createBrowserSupabaseClient());
+  pageProps: { ...pageProps }, //session,
+}: AppProps<{}>) {
+  //session: Session
+  // const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
     // <SessionContextProvider supabaseClient={supabase} initialSession={session}>

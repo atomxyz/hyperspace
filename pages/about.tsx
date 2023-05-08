@@ -71,8 +71,9 @@ export default function About() {
         <p>
           If you would like to explore a little bit more of the mathematical
           significance of these groups then these two papers are where the first
-          groups I constructed are explained. But, be warned, you'll probably
-          need a maths degree to understand the intricacies of these papers.
+          groups I constructed are explained. But, be warned, you{"'"}ll
+          probably need a maths degree to understand the intricacies of these
+          papers.
         </p>
         <p>
           A nilpotent group and its elliptic curve: non-uniformity of local zeta
@@ -82,7 +83,7 @@ export default function About() {
         </p>
         <p>
           You can read the story of the discovery of these new symmetrical
-          objects in Marcus's book Finding Moonshine.
+          objects in Marcus{"'"}s book Finding Moonshine.
         </p>
         <p>
           Marcus du Sautoy FRS OBE Simonyi Professor for the Public

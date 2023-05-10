@@ -63,7 +63,7 @@ export default function Layout({
           </div> */}
         </div>
       </div>
-      <main className="flex w-full flex-col items-center justify-center bg-[#fdf8f4] py-32">
+      <main className="flex w-full flex-col items-center justify-center bg-transparent py-32">
         {children}
       </main>
       <div className="bg-background absolute w-full border-t border-gray-200 bg-[#fdf8f4] py-5 text-center">

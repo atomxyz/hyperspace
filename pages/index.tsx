@@ -12,10 +12,12 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import Link from "next/link";
+import Background from "@/components/home/background";
 
 export default function Home() {
   return (
     <Layout>
+      <Background />
       <motion.div
         className="h-[70vh] px-5 xl:px-0"
         initial="hidden"

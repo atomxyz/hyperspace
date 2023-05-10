@@ -1,6 +1,5 @@
 import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -20,17 +19,17 @@ export default function Layout({
   };
   children: ReactNode;
 }) {
-  const session = useSession();
-  const { SignInModal, setShowSignInModal } = useSignInModal();
+  // const session = useSession();
+  // const { SignInModal, setShowSignInModal } = useSignInModal();
   const scrolled = useScroll(50);
 
   return (
     <>
       <Meta {...meta} />
-      <SignInModal />
+      {/* <SignInModal /> */}
       <div className="fixed w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
       <div
-        className={`fixed top-0 w-full ${
+        className={`fixed top-0 w-full bg-[#fdf8f4] ${
           scrolled
             ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
             : "bg-white/0"
@@ -47,7 +46,7 @@ export default function Layout({
             ></Image>
             <p>Atom</p>
           </Link>
-          <div>
+          {/* <div>
             <AnimatePresence>
               {!session ? (
                 <motion.button
@@ -61,14 +60,14 @@ export default function Layout({
                 <UserDropdown />
               )}
             </AnimatePresence>
-          </div>
+          </div> */}
         </div>
       </div>
-      <main className="flex w-full flex-col items-center justify-center py-32">
+      <main className="flex w-full flex-col items-center justify-center bg-[#fdf8f4] py-32">
         {children}
       </main>
-      <div className="absolute w-full border-t border-gray-200 bg-white py-5 text-center">
-        <p className="text-gray-500">Atom {new Date().getFullYear()}</p>
+      <div className="bg-background absolute w-full border-t border-gray-200 bg-[#fdf8f4] py-5 text-center">
+        <p className=" text-gray-500">Atom {new Date().getFullYear()}</p>
       </div>
     </>
   );

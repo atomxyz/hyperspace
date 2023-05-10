@@ -21,18 +21,21 @@ const inter = Inter({
 
 export default function MyApp({
   Component,
-  pageProps: { session, ...pageProps },
-}: AppProps<{ session: Session }>) {
-  const [supabase] = useState(() => createBrowserSupabaseClient());
+  pageProps: { ...pageProps }, //session,
+}: AppProps<{}>) {
+  //session: Session
+  // const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
-    <SessionContextProvider supabaseClient={supabase} initialSession={session}>
+    // <SessionContextProvider supabaseClient={supabase} initialSession={session}>
+    <>
       <RWBProvider>
         <div className={cx(sfPro.variable, inter.variable)}>
           <Component {...pageProps} />
         </div>
       </RWBProvider>
       <Analytics />
-    </SessionContextProvider>
+    </>
+    // </SessionContextProvider>
   );
 }

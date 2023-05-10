@@ -21,16 +21,7 @@ const SignInModal = ({
   showSignInModal: boolean;
   setShowSignInModal: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const session = useSession();
-  const supabase = useSupabaseClient();
-
   const [signInClicked, setSignInClicked] = useState(false);
-
-  async function signIn(providerName: Provider) {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: providerName,
-    });
-  }
 
   return (
     <Modal showModal={showSignInModal} setShowModal={setShowSignInModal}>
@@ -62,7 +53,6 @@ const SignInModal = ({
             } flex h-10 w-full items-center justify-center space-x-3 rounded-md border text-sm shadow-sm transition-all duration-75 focus:outline-none`}
             onClick={() => {
               setSignInClicked(true);
-              signIn("google");
             }}
           >
             {signInClicked ? (

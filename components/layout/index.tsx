@@ -11,6 +11,7 @@ import UserDropdown from "./user-dropdown";
 export default function Layout({
   meta,
   children,
+  background,
 }: {
   meta?: {
     title?: string;
@@ -18,6 +19,7 @@ export default function Layout({
     image?: string;
   };
   children: ReactNode;
+  background: string;
 }) {
   // const session = useSession();
   // const { SignInModal, setShowSignInModal } = useSignInModal();
@@ -63,7 +65,9 @@ export default function Layout({
           </div> */}
         </div>
       </div>
-      <main className="flex w-full flex-col items-center justify-center bg-transparent py-32">
+      <main
+        className={`flex w-full flex-col items-center justify-center py-32 ${background}`}
+      >
         {children}
       </main>
       <div className="bg-background absolute w-full border-t border-gray-200 bg-[#fdf8f4] py-5 text-center">

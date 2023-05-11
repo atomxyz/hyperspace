@@ -9,10 +9,10 @@ import Background from "@/components/home/background";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout background="bg-transparent">
       <Background />
       <motion.div
-        className="h-[70vh] px-5 xl:px-0"
+        className="h-[70vh] bg-transparent px-5  xl:px-0"
         initial="hidden"
         whileInView="show"
         animate="show"
@@ -37,8 +37,8 @@ export default function Home() {
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            Create and Name Custom Hyper Dimensional Structures, Raising Money
-            for Science and Charity
+            Create and Name New Hyper Dimensional Structures, Helping Raise
+            Money for Charity and Science
           </Balancer>
         </motion.p>
 

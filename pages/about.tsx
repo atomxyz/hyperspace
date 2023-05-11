@@ -6,7 +6,7 @@ import EquationG from "@/components/helpers/equationG";
 
 export default function About() {
   return (
-    <Layout>
+    <Layout background="bg-[#fdf8f4]">
       <motion.div
         className="h-[70vh] px-5 xl:px-0"
         initial="hidden"

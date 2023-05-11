@@ -20,9 +20,7 @@ export default function Background() {
     <div
       className="absolute -z-10 h-screen items-center justify-center "
       ref={threeDivRef}
-    >
-      TEST
-    </div>
+    ></div>
   );
 }
 

@@ -1,19 +1,33 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import * as THREE from "three";
 
 export default function Background() {
   const [initialized, setInitialized] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
 
   const threeDivRef = useCallback(
     // When dif gets initialized - avoiding unnecessary rerenderings
     (node: HTMLDivElement | null) => {
       if (node !== null && !initialized) {
         // Even if dev server reloads parts it doesn't reload this
-        initThreeJsScene(node);
+        initThreeJsScene(node, isMobile);
         setInitialized(true);
       }
     },
-    [initialized],
+    [initialized, isMobile],
   );
 
   return (
@@ -24,7 +38,7 @@ export default function Background() {
   );
 }
 
-const initThreeJsScene = (node: HTMLDivElement) => {
+const initThreeJsScene = (node: HTMLDivElement, isMobile: boolean) => {
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(
@@ -57,8 +71,10 @@ const initThreeJsScene = (node: HTMLDivElement) => {
     render();
   }
 
+  const numberOfPoints = isMobile ? 50 : 130;
+
   const water = new THREE.Mesh(
-    new THREE.PlaneGeometry(10, 10, 130, 130),
+    new THREE.PlaneGeometry(10, 10, numberOfPoints, numberOfPoints),
     new THREE.MeshBasicMaterial({
       color: 0x00000f,
       wireframe: true,

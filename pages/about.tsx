@@ -33,10 +33,7 @@ export default function About() {
         >
           <div className="flex flex-col ">About Hyperspace</div>
         </motion.h1>
-        <motion.div
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
-          className="md:px-[20vw]"
-        >
+        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="w-5/6">
           {aboutText.map((paragraph: WordingType, i: number) => (
             <motion.div key={i} className={`${paragraph.textLocation} py-3`}>
               {paragraph.text}

@@ -33,7 +33,7 @@ export default function Layout({
       <div
         className={`fixed top-0 w-full bg-[#fdf8f4] ${
           scrolled
-            ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+            ? "bg-[#fdf8f4]0 border-b border-gray-200 backdrop-blur-xl"
             : "bg-white/0"
         } z-30 transition-all`}
       >

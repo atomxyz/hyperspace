@@ -17,6 +17,7 @@ export default function EquationG() {
       height="67.560px"
       viewBox="0 -2116.3 35139.6 3732.7"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      className="m-auto  text-center"
     >
       <defs>
         <path

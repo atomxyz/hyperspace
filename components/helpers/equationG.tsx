@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 export default function EquationG() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
+
+  const h = !isMobile ? "100%" : "67.560px";
+  const w = !isMobile ? "100%" : "636.008px";
+  const viewBox = !isMobile
+    ? "0 -2116.3 35139.6 3732.7"
+    : "0 -2116.3 35139.6 3732.7";
+
   {
     //Latex Input
     /* G = \Biggl \langle \begin{matrix}
@@ -13,9 +34,9 @@ export default function EquationG() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="636.008px"
-      height="67.560px"
-      viewBox="0 -2116.3 35139.6 3732.7"
+      width={w}
+      height={h}
+      viewBox={viewBox}
       xmlnsXlink="http://www.w3.org/1999/xlink"
       className="m-auto  text-center"
     >

@@ -35,7 +35,7 @@ export default function About() {
         </motion.h1>
         <motion.div
           variants={FADE_DOWN_ANIMATION_VARIANTS}
-          className="m-auto w-5/6"
+          className="m-auto text-xs md:w-5/6 md:text-lg"
         >
           {aboutText.map((paragraph: WordingType, i: number) => (
             <motion.div key={i} className={`${paragraph.textLocation} py-3`}>

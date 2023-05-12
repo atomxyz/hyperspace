@@ -37,7 +37,7 @@ export default function Project() {
                 className="flex flex-row "
               >
                 <Image alt="Atom logo" src="/logo.png" width={80} height={50} />
-                <Balancer>
+                <Balancer className="flex flex-row">
                   Atom <span className="font-extralight">x </span>
                 </Balancer>
               </a>

@@ -1,8 +1,7 @@
 import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
-import { ATOM_TWITTER, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import { Twitter } from "@/components/shared/icons";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Background from "@/components/home/background";
@@ -27,19 +26,20 @@ export default function Home() {
         }}
       >
         <motion.h1
-          className="pt-10  text-center font-display text-4xl font-bold tracking-[-0.02em] text-black  md:text-7xl md:leading-[5rem]"
+          className="pt-10 text-center font-display text-4xl font-bold tracking-[-0.02em] text-black  md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <div className="flex flex-row ">
-            {" "}
             <Image
               src="/images/logoHyper.png"
               alt="hyper logo"
               width="80"
               height="50"
-              className="mr-5 rounded-sm drop-shadow-none"
+              className="rounded-sm drop-shadow-none md:mr-5"
             />
-            <span className="drop-shadow-sm">Hyperspace</span>
+            <span className="my-auto ml-4 pt-3 drop-shadow-sm md:m-auto">
+              Hyperspace
+            </span>
           </div>
         </motion.h1>
         <motion.p

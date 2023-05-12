@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex flex-row ">
             {" "}
             <Image
-              src="/Images/logoHyper.png"
+              src="/images/logoHyper.png"
               alt="hyper logo"
               width="80"
               height="50"

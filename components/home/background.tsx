@@ -20,9 +20,7 @@ export default function Background() {
     <div
       className="absolute -z-10 h-screen items-center justify-center "
       ref={threeDivRef}
-    >
-      TEST
-    </div>
+    ></div>
   );
 }
 
@@ -60,7 +58,7 @@ const initThreeJsScene = (node: HTMLDivElement) => {
   }
 
   const water = new THREE.Mesh(
-    new THREE.PlaneGeometry(10, 10, 155, 155),
+    new THREE.PlaneGeometry(10, 10, 130, 130),
     new THREE.MeshBasicMaterial({
       color: 0x00000f,
       wireframe: true,

@@ -11,6 +11,7 @@ import UserDropdown from "./user-dropdown";
 export default function Layout({
   meta,
   children,
+  background,
 }: {
   meta?: {
     title?: string;
@@ -18,6 +19,7 @@ export default function Layout({
     image?: string;
   };
   children: ReactNode;
+  background: string;
 }) {
   // const session = useSession();
   // const { SignInModal, setShowSignInModal } = useSignInModal();
@@ -31,20 +33,19 @@ export default function Layout({
       <div
         className={`fixed top-0 w-full bg-[#fdf8f4] ${
           scrolled
-            ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
+            ? "bg-[#fdf8f4]0 border-b border-gray-200 backdrop-blur-xl"
             : "bg-white/0"
         } z-30 transition-all`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
-              src="/logo.png"
-              alt="Atom logo"
-              width="30"
-              height="30"
-              className="mr-2 rounded-sm"
-            ></Image>
-            <p>Atom</p>
+              src="/Images/logoHyper.png"
+              alt="hyper logo"
+              width="50"
+              height="50"
+              className=" rounded-sm"
+            />
           </Link>
           {/* <div>
             <AnimatePresence>
@@ -63,7 +64,9 @@ export default function Layout({
           </div> */}
         </div>
       </div>
-      <main className="flex w-full flex-col items-center justify-center bg-transparent py-32">
+      <main
+        className={`flex w-full flex-col items-center justify-center py-32 ${background}`}
+      >
         {children}
       </main>
       <div className="bg-background absolute w-full border-t border-gray-200 bg-[#fdf8f4] py-5 text-center">

@@ -2,8 +2,8 @@ import { ATOM_DESCRIPTION, ATOM_TITLE, ATOM_URL } from "@/lib/constants";
 import Head from "next/head";
 
 export default function Meta({
-  title = ATOM_TITLE,
-  description = ATOM_DESCRIPTION,
+  title = "Hyperspace",
+  description = "Hyperdimensional structures and digital certificates",
   image = `${ATOM_URL}/api/og`,
 }: {
   title?: string;

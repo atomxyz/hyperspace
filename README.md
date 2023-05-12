@@ -1,5 +1,5 @@
-<a href="https://hyperspace.atomprotocol.xyz">
-  <img alt="Hyperspace" src="https://res.cloudinary.com/emergent/image/upload/v1683906391/ghbg_lnb8t1.png">
+<a href="https://hyperspace.atomprotocol.xyz" style="display:flex; flex:row">
+  <img alt="Hyperspace" width="100" height="100" src="https://res.cloudinary.com/emergent/image/upload/v1683906391/ghbg_lnb8t1.png">
   <h1 align="center">Hyperspace</h1>
 </a>
 

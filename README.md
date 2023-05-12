@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://twitter.com/atomprotocol_">
-    <img src="https://img.shields.io/twitter/follow/atomprotocol_?style=flat&label=atomprotocol_&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
+    <img src="https://img.shields.io/twitter/follow/atomprotocol_?style=flat&label=atomprotocol_&logo=twitter&color=0bf&logoColor=fff" alt="Atom Twitter follower count" />
   </a>
   
 </p>

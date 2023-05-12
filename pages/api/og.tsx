@@ -14,7 +14,7 @@ export default async function handler(req: NextRequest) {
   const [sfProData] = await Promise.all([sfPro]);
 
   const { searchParams } = req.nextUrl;
-  const title = searchParams.get("title") || "Precedent";
+  const title = searchParams.get("title") || "Hyperspace";
 
   return new ImageResponse(
     (
@@ -32,8 +32,8 @@ export default async function handler(req: NextRequest) {
         }}
       >
         <img
-          src={new URL("../../public/logo.png", import.meta.url).toString()}
-          alt="Precedent Logo"
+          src={new URL("../../public/images/logoHyper.png", import.meta.url).toString()}
+          alt=" Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
         <h1
